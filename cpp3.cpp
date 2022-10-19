@@ -2,6 +2,8 @@
 #include<iostream>
 using namespace std;
 
+// 1. WAP to check given string is numeric or not.
+
 main()
 {
 	char a[100];
