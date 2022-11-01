@@ -1,22 +1,21 @@
 
-
-// under construction
-
-
 // 2. WAP to find factorial using recursion.
-
 
 #include<iostream>
 using namespace std;
 
-int rec(int x,int y)
+void rec()
 {
-    if (x>0)
+    int a,fact=1;
+    cout << "enter a number : "<< endl;
+    cin >> a;
+
+    for(int i=a; i>=1; i--)
     {
-        y = y * x;
-        return y;
+        fact = fact * i;
     }
-    rec(x-1,y);
+
+    cout << fact;
 }
 
 int main()
@@ -24,20 +23,8 @@ int main()
 {
 
        
+rec();
 
-
-    int a,fact=1;
-    cout << "enter a number : "<< endl;
-    cin >> a;
-
-    int c =rec(a,fact);
-    cout << c;
-
-//     for(int i=a; i>=1; i--)
-//     {
-//         fact = fact * i;
-//     }
-
-//     cout << fact;
+   
 
 }
