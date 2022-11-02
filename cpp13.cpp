@@ -1,62 +1,146 @@
 
 // 2. WAP to create a class to read and add two times.
 
-#include <iostream>
+
+#include<iostream>
 using namespace std;
 
 class Time
 {
-public:
-    int ak()
+    public : 
+
+    int h,m,s;
+
+    void read()
     {
-        int h;
-        cout << "enter value in hour : " << endl;
-        cin >> h;
-
-        int m;
-        cout << "enter value in minutes : " << endl;
-        cin >> m;
-
-        int s;
-        cout << "enter value in second : " << endl;
-        cin >> s;
-
-        int second = (h * 60 * 60) + (m * 60) + s;
-
-        return second;
+        cout << "enter hour minute and second : ";
+        cin >> h >> m >> s;
     }
 
-    void result()
+    void result(Time a2)
     {
-        Time a1, a2;
+        Time a3;
+        int hh,mm,ss;
 
-        int t1 = a1.ak();
-        int t2 = a2.ak();
+        a3.h = h + a2.h;
+        a3.m = m + a2.m;
+        a3.s = s + a2.s;
 
-        int sec = t1 + t2;
-
-        int i = 0;
-
-        do
+        if (a3.s>=60)
         {
-            sec = sec - 60;
-            i++;
-        } while (sec >= 60);
+            mm = a3.s/60;
+            ss = a3.s - (60*mm);
+            mm = mm + a3.m;
 
-        int j = 0;
-
-        do
+            if (mm>=60)
+            {
+                hh = mm/60;
+                mm = mm - (60*hh);
+                hh = hh + a3.h;
+                cout << hh << ":" << mm << ":" << ss;
+            }
+            else
+            {
+                cout << hh << ":" << mm << ":" << ss;
+            }
+            
+        }
+        else
         {
-            i = i - 60;
-            j++;
-        } while (i >= 60);
-
-        cout << j << " : " << i << " : " << sec;
+            cout << h << ":" << mm << ":" << ss;
+        }
+        
     }
 };
 
 int main()
 {
-    Time a;
-    a.result();
+    Time a1,a2;
+    a1.read();
+    a2.read();
+
+    a1.result(a2);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// #include <iostream>
+// using namespace std;
+
+// class Time
+// {
+// public:
+//     int ak()
+//     {
+//         int h;
+//         cout << "enter value in hour : " << endl;
+//         cin >> h;
+
+//         int m;
+//         cout << "enter value in minutes : " << endl;
+//         cin >> m;
+
+//         int s;
+//         cout << "enter value in second : " << endl;
+//         cin >> s;
+
+//         int second = (h * 60 * 60) + (m * 60) + s;
+
+//         return second;
+//     }
+
+//     void result()
+//     {
+//         Time a1, a2;
+
+//         int t1 = a1.ak();
+//         int t2 = a2.ak();
+
+//         int sec = t1 + t2;
+
+//         int i = 0;
+
+//         do
+//         {
+//             sec = sec - 60;
+//             i++;
+//         } while (sec >= 60);
+
+//         int j = 0;
+
+//         do
+//         {
+//             i = i - 60;
+//             j++;
+//         } while (i >= 60);
+
+//         cout << j << " : " << i << " : " << sec;
+//     }
+// };
+
+// int main()
+// {
+//     Time a;
+//     a.result();
+// }
