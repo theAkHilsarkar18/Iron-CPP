@@ -64,23 +64,7 @@ int main()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// second method 
 
 
 
