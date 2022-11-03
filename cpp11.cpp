@@ -4,7 +4,7 @@
 #include<iostream>
 using namespace std;
 
-void table(int a)
+inline void table(int a)
 {
     
     for(int i=1; i<=10; i++)
@@ -12,6 +12,7 @@ void table(int a)
         cout << a << "*" << i << "=" << a*i << endl;
     }
 }
+
 int main()
 {
     int x;
