@@ -1,70 +1,87 @@
 
-// 1. WAP to create a class for student to get and print details of N students. (with use of array of objects)
+// 2. WAP to make Railway Reservation System.
+// Requirements:
+// (A) User Input Train Number , Train Name , Source , Destination , Train Time.
+// (B) Display Record By Search Train Number.
+// (C) Minimum 3 Input Train Record.
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class Student
+class Railway
 {
-    public : 
+public:
+    int tno;
+    string tname;
+    string tsource;
+    string desti;
+    int time;
 
-    int id;
-    string name;
-    int roll;
-    int std;
-    int age;
-    long number;
-    string insname;
-    string add;
-
-    void set()
+    void design()
     {
         cout << "\n\n";
-        cout << "enter student id                 : ";
-        cin >> id;
-        cout << "enter student name               : ";
-        cin >> name;
-        cout << "enter student roll number        : ";
-        cin >> roll;
-        cout << "enter student standard           : ";
-        cin >> std;
-        cout << "enter student age                : ";
-        cin >> age;
-        cout << "enter parents mobile number      : ";
-        cin >> number;
+        cout << "< < < < < < < < < < Welcome , Indian Railway Reservation System > > > > > > > > > >\n\n";
+        cout << "\n\t<-------- Enter which trains you want to prefer for travel -------->\n\n";
        
 
+       
+    }
+    void set()
+    {
+        
+        cout << "Enter train number      : ";
+        cin >> tno;
+        cout << "Enter train's name      : ";
+        cin >> tname;
+        cout << "Enter train source      : ";
+        cin >> tsource;
+        cout << "Enter train destination : ";
+        cin >> desti;
+        cout << "Enter train's time      : ";
+        cin >> time;
+        
+        cout << "\n----------------------------------------------------------------------------------------------------\n\n";
     }
 
-    void get()
+    void get(int n)
     {
-        cout << "\n\n\n";
-        cout << "Student's details : " << endl;
+        if(n == tno)
+        {
+            cout << "\n\n \t\t - - - - - - - Booking Successfull - - - - - - -";
+            cout << "\n\t\t - - - - - - - This is train detail - - - - - - - \n";
 
-        cout << "\nstudent's id               : " << id ;
-        cout << "\nstudent's name             : " << name;
-        cout << "\nstudent's roll number      : " << roll;
-        cout << "\nstudent's standard         : " << std ;
-        cout << "\nstudent's age              : " << age ;
-        cout << "\nstudent's contact          : " << number;
-       
+            cout << "\nTrain number is   : " << tno;
+            cout << "\nTrains name is   : " << tname;
+            cout << "\nTrains source is : " << tsource;
+            cout << "\nTrains time is   : " << time;
+
+        }
+        // else
+        // {
+        //     cout << "\n\n!! Please Enter valid Train number !!\n\n";
+        // }
     }
 };
 
 int main()
 {
-    Student s[10];
+    Railway r1[100];
+    r1[0].design();
+    
+    
+
+    for(int i=0; i<2; i++)
+    {
+        r1[i].set();
+    }
+
     int n;
-    cout << "enter size of array : ";
+    cout << "Enter in which train number you want to travel : ";
     cin >> n;
-
-    for(int i=0; i<n; i++)
+    
+    for(int i=0; i<2; i++)
     {
-        s[i].set();
+        r1[i].get(n);
     }
-
-    for(int i=0; i<n; i++)
-    {
-        s[i].get();
-    }
+    
 }
