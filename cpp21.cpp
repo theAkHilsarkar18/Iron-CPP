@@ -54,6 +54,7 @@ public:
             cout << "\nTrains name is   : " << tname;
             cout << "\nTrains source is : " << tsource;
             cout << "\nTrains time is   : " << time;
+            cout << "\n\n";
 
         }
         // else
@@ -70,7 +71,7 @@ int main()
     
     
 
-    for(int i=0; i<2; i++)
+    for(int i=0; i<3; i++)
     {
         r1[i].set();
     }
@@ -79,7 +80,7 @@ int main()
     cout << "Enter in which train number you want to travel : ";
     cin >> n;
     
-    for(int i=0; i<2; i++)
+    for(int i=0; i<3; i++)
     {
         r1[i].get(n);
     }
