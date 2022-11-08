@@ -1,3 +1,4 @@
+
 // 3. WAP to make Supermarket Billing System.
 // Requirements:
 // (A) Verify User Id And Password
@@ -23,9 +24,9 @@ public:
         string a;
         int b;
 
-        cout << "\n\nenter user id : ";
+        cout << "\n\nEnter user id : ";
         cin >> a;
-        cout << "enter pasword : ";
+        cout << "Enter pasword : ";
         cin >> b;
 
         if(id == a && password == b)
@@ -64,14 +65,22 @@ public:
         cin >> disc;
 
     }
+    
+    void heading()
+    {
+    	cout << "\nNo." << "\t" << "Name " << "\t" << "Qa" << "\t" << "Tax" << "\t" << "Discount" << endl;
+	}
 
     void out()
     {
-        cout << "\n Item Number        : " << inum;
-        cout << "\n Item Name          : " << iname;
-        cout << "\n Item Quantity      : " << iq;
-        cout << "\n Tax Percentage     : " << tax;
-        cout << "\n Disount Percentage : " << disc;
+    	
+//        cout << "\n Item Number        : " << inum;
+//        cout << "\n Item Name          : " << iname;
+//        cout << "\n Item Quantity      : " << iq;
+//        cout << "\n Tax Percentage     : " << tax;
+//        cout << "\n Disount Percentage : " << disc;
+        
+        cout << inum << "\t" << iname << "\t " << iq << "\t" << tax << "\t" << disc << endl;
     }
 
    
@@ -105,7 +114,9 @@ int main()
         }
     }
 
-    cout <<"--------------------------------------------------------------------------------------------------------------------------------------";
+    cout <<"----------------------------------------------------------------------------------------------------------------";
+    
+    m1[0].heading();
 
     for(int i=0; i<n; i++)
     {
@@ -115,5 +126,4 @@ int main()
 
     cout << "\n\n";
 }
-
 
