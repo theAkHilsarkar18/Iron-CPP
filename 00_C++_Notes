@@ -1,1 +1,212 @@
 
+C++
+
+-> Devloped in : 1980
+-> Devloped by : Bjarne Stroustrup (Yarn Stroustrup)
+-> Devloped at : AT & T Bell Laboratory USA (American Telephone & Telegraph)
+
+-> C++ is updated version of C language.
+
+-> header file : #include<iostream>
+              using namespace std;
+              
+-> To find length of string
+  for(int i=0; a[i]!='\0'; i++)
+  { 
+    count ++;
+  }
+
+-> For Toggal case
+   Ascii value
+    a to z = 97 to 122
+    A to Z = 65 to 90
+    Defference between small and capital : 32
+    
+-> Reference Variable    
+   int a = 10;
+   int *b;
+   b = &a; <- b take address of a
+   
+-> Object Oriented Programming
+
+    Class + Object = OOP
+    C++ is POP(Procedural Oriented Programming) + OOP(Object Oriented Programming).
+    
+    Class  : Group of Function and Attributes.
+    Syntax : 
+    keyword -> class Math <- always start with Capital letter
+              {
+                
+                class body
+                
+              }; <- end with ';'.
+    
+    Object : Object is an Instanse of Class.
+
+-> Access Modifier
+    
+    -> Public
+    -> Private
+    -> Protected
+    
+-> Concept Of OOP
+
+    1. Data Encaptulation
+    2. Inheritance
+    3. Polymorphism
+    4. Data Abstraction
+    5. Constructor & Destructor
+    
+-> Data Encaptulation : Is a Data Hiding Process.
+   Types of Variable -> 1. Local Variable  -> Define in Method or Function.
+                     -> 2. Global Variable -> Define in Class
+                     
+                     -> This Keyword -> When Global and Local Variable are same at this time to define Global Variable we can use 'this -> ' keyword.
+                         this -> variable name
+                         
+-> Nested Member Function : When we call function in other Method / Function.
+
+-> Array of Object : Emp e1[100]; -> We can call object n time by creating Array of Object by loop.
+
+-> Static Keyword 
+      
+        -> static keyword used for lock memory in RAM.
+        -> It's lock address of value not value.
+        -> We cant assign value of static variable in class.
+        -> When we want to use variable or method without creating a class , use static ..
+        
+-> Friend Function : If we want to use functions and varibale which are declared in private , at that time you can use Friend Function.
+    
+-> Static Member Function : Where variable and method both are static..
+    exa.
+          static int a,b;
+          static void addition()
+          {
+              a = 10;
+              b = 20;
+              cout << a+b;
+          }
+    
+-> Constructor : Constructor is a special method which can with a name of class
+               : Constructor have not any return type,
+               : Constructor call automatically when object called.
+              
+               -> Types Of Constructor
+                  
+                    -> Default Constructor
+                        Math()
+                        {
+                          ......
+                        }
+                        
+                    -> Parameterized Constructor
+                        Math(int x , int y)
+                        {
+                          .......
+                        }
+
+                    -> Copy Constructor
+                        Math(Math &m1)
+                        {
+                          ....
+                        }
+                        Math()
+                        {
+                          ....
+                        }
+                        int main()
+                        {
+                          Math m2;
+                          Math m1(m2);
+                        }
+ 
+-> Destructor : Same it is Constructor but call in last when programme executed.
+      
+          Tilled sign -> ~ Math()
+                            {
+                              ......
+                            }
+
+-> Inheritance : When one Class is inherit to another Class its called Inheritance. (Combine more than one class).
+               : We can use Parent class's method or variable in Child class without creating object.
+
+  
+        A -> Parent class, Base class, Super class.
+        ↓
+        B -> Child class, Derived class, Sub class.
+        
+        -> Types of Inheritance
+        
+            -> 1. Single Inheritance : Single Parent Single Child.
+                      A
+                      ↓
+                      B
+                      
+            -> 2. Multiple Inheritance : Multi Parent Single Child
+                    A  B  C <- Multi Child
+                    ↓  ↓  ↓
+                       ↓
+                       D <- Single Child
+            
+            -> 3. Multilevel Inheritance : Interconnect / Linear connection with each class.
+                      A -> Parent
+                      ↓ 
+                      B -> Child for B and Parent for C.
+                      ↓
+                      C -> Child
+              
+             -> 4. Hierachical Inheritance : Single Parent Multi Child.
+                       A
+                    ↓  ↓  ↓    
+                    B  C  D  
+                    
+             -> 5. Hybrid Inheritance : Combination of any two Inheritance.
+                        A
+                     ↓     ↓
+                     B     C
+                        ↓
+                        D
+             -> Ambiguty Error and Solution
+                Use scope resolution operator -> class name :: function name();
+                
+-> Polymorphism : Different Function with same name
+
+    1. Compile Time : 
+          
+          1. Method Overloading
+              -> Method name same but parameter different.
+          
+          2. Operator Overloading
+              -> Method name start with operator sign. ex : + - 
+             
+    2. Run Time : 
+    
+         1. Method Overriding
+              -> Method name same , parameter same but class is different.
+              
+              
+-> Data Abstraction : Data hiding process (But in Backend).
+              
+              virtual function : 
+                                  virtual void gold()
+                                  {
+                                    // give body if you want to create simple virtual function
+                                  }
+              
+              pure virtual function : 
+                                        virtual void gold() = 0;
+              
+-> Exception Handling (Error Handling). : when output comes with zero error but not true.
+
+            ex. string input in integer data type value.
+            
+            try
+            {
+              throw x;
+            }
+            catch(int x)
+            {
+            
+            }
+              
+             
