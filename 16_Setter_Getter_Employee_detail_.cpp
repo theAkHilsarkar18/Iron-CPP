@@ -22,34 +22,35 @@ class Emp
         // cout << "enter your id , salary , experiance , contact number : " << endl;
         // cin >> id >> salary >> exp >> contact;
 
-        cout << "enter id : " << endl;
+        cout << "enter id                         : ";
         cin >> id;
 
-        cout << "enter your name : " << endl;
+        cout << "enter your name                  : ";
         cin >> name;
 
-        cout << "enter your role in company : " << endl;
+        cout << "enter your role in company       : ";
         cin >> role;
 
-        cout << "enter salary : " << endl;
+        cout << "enter salary                     : ";
         cin >> salary;
 
-        cout << "enter your experiance in company (in year): " << endl;
+        cout << "enter your experiance in company : ";
         cin >> exp;
         
-        cout << "enter your address : " << endl;
+        cout << "enter your address               : ";
         cin >> add;
 
-        cout << "enter your email address : " << endl;
+        cout << "enter your email address         : ";
         cin >> email;
 
-        cout << "enter contact number : "<< endl;
+        cout << "enter contact number             : ";
         cin >> contact;
 
     }
     
     void get()
     {
+        cout << "-------------------------------------------------------------------------------------------------------------------";
         cout << "\n\n\n\n";
         cout << "id = " << id << endl;
         cout << "name = " << name;
@@ -100,16 +101,6 @@ int main()
     e5.get();
     cout << "\n\n";
     cout << "\n\n";
-
-   
-    
-
-    
-    
-
-    
-
-    
     
 
 }
