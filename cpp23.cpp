@@ -4,23 +4,29 @@
 #include<iostream>
 using namespace std;
 
-class Math
+class B;
+class A
 {
     private : 
-    int a,b;
-    friend void addition(Math m1);
+    int a = 10;
+    friend void  addition(A a1, B b1);
 };
 
-void addition(Math m1)
+class B
 {
-    m1.a = 10;
-    m1.b = 20;
+    private : 
+    int b = 20;
+    friend void  addition(A a1, B b1);
+};
 
-    cout << "addition is : " << m1.a + m1.b;
+void  addition(A a1, B b1)
+{
+    cout << a1.a + b1.b;
 }
 
 int main()
 {
-    Math m1;
-   addition(m1);
+    A a1;
+    B b1;
+    addition(a1,b1);
 }
